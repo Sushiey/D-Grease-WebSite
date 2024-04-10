@@ -1,4 +1,4 @@
-# D-Grease WebSite |  
+# D-Grease WebSite 
 
 ###  :file_folder: File Structure
 

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>D-Grease - Home</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <style>
+    /* Additional Styles for Burger Menu Animation */
+    .burger-menu.active .line-1 {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .burger-menu.active .line-2 {
+        opacity: 0;
+    }
+
+    .burger-menu.active .line-3 {
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown-menu {
+        display: none; 
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ddd;
+        z-index: 999; 
+    }
+
+    .dropdown-menu.active {
+        display: block;
+    }
+
+    .dropdown-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-menu ul li {
+        padding: 5px 0;
+    }
+
+    .dropdown-menu ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .dropdown-menu ul li a:hover {
+        color: #f61d15;
+    }
+
+    .nav-bar ul li a.active {
+        color: #f61d15;
+    }
+  </style>
+
+  <!-- Header Start -->
+  <!-- Desktop View -->
+  <div class="header-desktop">
+    <div class="logo"><img src="img/D-grease_logo.png" alt="D-GREASE LOGO"></div> 
+    <div class="contact-info">
+      <div class="phone"><a href="tel:01226777527">Speak to an expert : 01226777527</a></div>
+      <div class="social-media">
+        <div class="social-icon"><a href="https://www.facebook.com"><img src="img/socials/facebook_logo_white.png" alt="FaceBook Icon"></a></div> 
+        <div class="social-icon"><a href="https://www.twitter.com"><img src="img/socials/X_logo_white.png" alt="X Icon"></a></div> 
+      </div>
+      <a href="#" class="message-button">Message Us</a> 
+    </div>
+
+    <!-- Burger Menu -->
+    <div class="burger-menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+  </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+  <!-- Header End -->
+
+</head>
+<body>
+  <h1>Welcome to D-Grease!</h1>
+  <p>This is the home page of our website.</p>
+
+</body>
+
+<script>
+  // JavaScript to toggle the active class on click
+  const burgerMenu = document.querySelector('.burger-menu');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  burgerMenu.addEventListener('click', function() {
+      this.classList.toggle('active');
+      dropdownMenu.classList.toggle('active');
+  });
+
+  // JavaScript to hide dropdown menu on desktop view
+  window.addEventListener('resize', function() {
+      if (window.innerWidth > 900) {
+          dropdownMenu.classList.remove('active');
+          burgerMenu.classList.remove('active');
+      }
+  });
+
+      document.addEventListener("DOMContentLoaded", function() {
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      const navLink = document.querySelector('.nav-bar ul li a');
+      const body = document.querySelector('body');
+
+      navLink.addEventListener('click', function() {
+          dropdownMenu.classList.toggle('active');
+          body.classList.toggle('active-dropdown');
+      });
+  });
+
+</script>
+
+</html>

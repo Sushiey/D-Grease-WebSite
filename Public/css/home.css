@@ -15,7 +15,9 @@
     margin-bottom: 20px; /* Adjusted margin bottom */
     /* Different font sizes based on viewport width */
     font-size: 50px; /* Largest font size by default */
+    margin-top: 100px; /* Decreased margin top by 30 pixels */
 }
+
 
 .new-content p {
     color: #555;
@@ -39,6 +41,17 @@
     width: 220px; /* Adjusted width */
     height: 170px; /* Adjusted height */
     z-index: 1; /* Ensure badge is above the content */
+    animation: badgeBounce 1s infinite alternate; /* Added animation */
+}
+
+/* Bounce animation for badge */
+@keyframes badgeBounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
 }
 
 /* Media Query for Large Desktop View */
@@ -52,7 +65,7 @@
 @media (max-width: 900px) {
     .new-content h2 {
         font-size: 40px; /* Reduced font size for screens between 1100px and 1000px */
-        animation: shrinkFont 0.5s forwards; /* Added animation */
+        animation: shrinkFontMedium 0.5s forwards; /* Added animation */
     }
     .new-content p {
         font-size: 18px; /* Smaller font size for screens below 900px */
@@ -60,7 +73,15 @@
     }
     .badge {
         top: 120px; /* Adjust top position */
-        animation: moveBadge 0.5s forwards; /* Added animation */
+        animation: moveBadge 0.5s forwards, badgeBounce 1s infinite alternate; /* Added animation */
+    }
+}
+
+/* Media Query for Small Desktop View */
+@media (max-width: 600px) {
+    .new-content h2 {
+        font-size: 30px; /* Reduced font size for screens below 600px */
+        animation: shrinkFontSmall 0.5s forwards; /* Added animation */
     }
 }
 
@@ -69,16 +90,25 @@
         animation: enlargeFont 0.5s forwards; /* Added animation */
     }
     .badge {
-        animation: moveBadgeReverse 0.5s forwards; /* Added animation */
+        animation: moveBadgeReverse 0.5s forwards, badgeBounce 1s infinite alternate; /* Added animation */
     }
 }
 
-@keyframes shrinkFont {
+@keyframes shrinkFontMedium {
     from {
         font-size: 50px;
     }
     to {
         font-size: 30px; /* Reduced font size for medium desktop view */
+    }
+}
+
+@keyframes shrinkFontSmall {
+    from {
+        font-size: 40px; /* Reduced font size for medium desktop view */
+    }
+    to {
+        font-size: 30px; /* Reduced font size for small desktop view */
     }
 }
 
@@ -93,26 +123,79 @@
 
 @keyframes moveBadge {
     from {
-        top: 170px; /* Original top position */
-        width: 220px; /* Original width */
-        height: 170px; /* Original height */
+        top: 180px; /* Original top position */
+        width: 245px; /* Original width */
+        height: 195px; /* Original height */
     }
     to {
-        top: 105px; /* Adjusted top position */
-        width: 200px; /* Adjusted width */
-        height: 150px; /* Adjusted height */
+        top: 130px; /* Adjusted top position */
+        width: 225px; /* Adjusted width */
+        height: 175px; /* Adjusted height */
     }
 }
 
 @keyframes moveBadgeReverse {
     from {
-        top: 105px; /* Adjusted top position */
-        width: 200px; /* Adjusted width */
-        height: 150px; /* Adjusted height */
+        top: 130px; /* Adjusted top position */
+        width: 225px; /* Adjusted width */
+        height: 175px; /* Adjusted height */
     }
     to {
-        top: 170px; /* Original top position */
-        width: 220px; /* Original width */
-        height: 170px; /* Original height */
+        top: 180px; /* Original top position */
+        width: 245px; /* Original width */
+        height: 195px; /* Original height */
+    }
+}
+
+/* Button Styles */
+.parts-washers-button,
+.spray-gun-cleaners-button,
+.brake-cleaners-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: #f61d15;
+    background: none;
+    border: 2px solid #f61d15; /* Added border */
+    border-radius: 5px; /* Added border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for background color and text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.parts-washers-button:hover,
+.spray-gun-cleaners-button:hover,
+.brake-cleaners-button:hover {
+    background-color: #f61d15; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Big Button Styles */
+.big-button {
+    display: inline-block;
+    margin-top: 60px; /* Adjusted margin to move buttons down more */
+    padding: 25px 50px; /* Increased padding to make buttons bigger */
+    font-size: 32px; /* Increased font size */
+    font-weight: bold;
+    color: #f61d15;
+    background-color: transparent;
+    border: 3px solid #f61d15; /* Added thicker border */
+    border-radius: 10px; /* Added border radius */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added transition for background color, text color, and transform */
+}
+
+.big-button:hover {
+    background-color: #f61d15; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    transform: scale(1.05); /* Scale the button slightly on hover */
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 1000px) {
+    .big-button {
+        padding: 15px 30px; /* Decreased padding for smaller size */
+        font-size: 24px; /* Decreased font size for smaller size */
+        margin-top: 30px; /* Adjusted margin for smaller size */
     }
 }

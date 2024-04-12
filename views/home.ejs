@@ -107,9 +107,16 @@
 <body>
   <!-- Your body content goes here -->
   <div class="new-content">
-      <h2>Specialists in waste management and suppliers of <span class="bold-text">parts washers</span>, <span class="bold-text">spray gun cleaners</span>, and <span class="bold-text">brake cleaners</span>.</h2>
+    <h2>Specialists in waste management and suppliers of <span class="bold-text">parts washers</span>, <span class="bold-text">spray gun cleaners</span>, and <span class="bold-text">brake cleaners</span>.</h2>
+    <!-- Buttons for parts washers and spray gun cleaners -->
+    <div class="buttons">
+        <a href="#" class="big-button parts-washers-button">Parts Washers</a>
+        <a href="#" class="big-button spray-gun-cleaners-button">Spray Gun Cleaners</a>
+    </div>
   </div>
+
   <div class="badge"></div> <!-- Added badge -->
+
 
 </body>
 
@@ -130,7 +137,7 @@
       }
   });
 
-      document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function() {
       const dropdownMenu = document.querySelector('.dropdown-menu');
       const navLink = document.querySelector('.nav-bar ul li a');
       const body = document.querySelector('body');

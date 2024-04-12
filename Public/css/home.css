@@ -1,0 +1,118 @@
+/* Styles specific to the home page */
+
+/* Additional Styles for new content */
+.new-content {
+    text-align: center;
+    margin-top: 50px; /* Adjust margin top as needed */
+    padding: 100px; /* Increased padding for desktop view */
+    position: relative; /* Added position relative */
+}
+
+.new-content h2 {
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5; /* Added line height */
+    margin-bottom: 20px; /* Adjusted margin bottom */
+    /* Different font sizes based on viewport width */
+    font-size: 50px; /* Largest font size by default */
+}
+
+.new-content p {
+    color: #555;
+    font-size: 24px; /* Larger font size for desktop view */
+    margin-top: -20px; /* Adjusted margin top */
+}
+
+.bold-text {
+    font-weight: bold;
+    color: #f61d15;
+}
+
+/* Additional Styles for badge */
+.badge {
+    position: absolute;
+    top: 170px; /* Adjust top position */
+    right: 5px; /* Adjust right position */
+    background-image: url('../img/rent_lease_buy.png'); /* Adjust image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 220px; /* Adjusted width */
+    height: 170px; /* Adjusted height */
+    z-index: 1; /* Ensure badge is above the content */
+}
+
+/* Media Query for Large Desktop View */
+@media (max-width: 1100px) {
+    .new-content h2 {
+        font-size: 50px; /* Large font size for screens above 1100px */
+    }
+}
+
+/* Media Query for Medium Desktop View */
+@media (max-width: 900px) {
+    .new-content h2 {
+        font-size: 40px; /* Reduced font size for screens between 1100px and 1000px */
+        animation: shrinkFont 0.5s forwards; /* Added animation */
+    }
+    .new-content p {
+        font-size: 18px; /* Smaller font size for screens below 900px */
+        margin-top: -40px; /* Adjusted margin top for small text mode */
+    }
+    .badge {
+        top: 120px; /* Adjust top position */
+        animation: moveBadge 0.5s forwards; /* Added animation */
+    }
+}
+
+@media (min-width: 901px) {
+    .new-content h2 {
+        animation: enlargeFont 0.5s forwards; /* Added animation */
+    }
+    .badge {
+        animation: moveBadgeReverse 0.5s forwards; /* Added animation */
+    }
+}
+
+@keyframes shrinkFont {
+    from {
+        font-size: 50px;
+    }
+    to {
+        font-size: 30px; /* Reduced font size for medium desktop view */
+    }
+}
+
+@keyframes enlargeFont {
+    from {
+        font-size: 30px; /* Reduced font size for medium desktop view */
+    }
+    to {
+        font-size: 40px; /* Original font size for medium desktop view */
+    }
+}
+
+@keyframes moveBadge {
+    from {
+        top: 170px; /* Original top position */
+        width: 220px; /* Original width */
+        height: 170px; /* Original height */
+    }
+    to {
+        top: 105px; /* Adjusted top position */
+        width: 200px; /* Adjusted width */
+        height: 150px; /* Adjusted height */
+    }
+}
+
+@keyframes moveBadgeReverse {
+    from {
+        top: 105px; /* Adjusted top position */
+        width: 200px; /* Adjusted width */
+        height: 150px; /* Adjusted height */
+    }
+    to {
+        top: 170px; /* Original top position */
+        width: 220px; /* Original width */
+        height: 170px; /* Original height */
+    }
+}

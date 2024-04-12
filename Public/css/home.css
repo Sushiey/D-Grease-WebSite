@@ -69,7 +69,7 @@
     }
     .new-content p {
         font-size: 18px; /* Smaller font size for screens below 900px */
-        margin-top: -40px; /* Adjusted margin top for small text mode */
+        margin-top: -30px; /* Adjusted margin top for small text mode */
     }
     .badge {
         top: 120px; /* Adjust top position */
@@ -124,8 +124,8 @@
 @keyframes moveBadge {
     from {
         top: 180px; /* Original top position */
-        width: 245px; /* Original width */
-        height: 195px; /* Original height */
+        width: 225px; /* Original width */
+        height: 175px; /* Original height */
     }
     to {
         top: 130px; /* Adjusted top position */
@@ -142,8 +142,8 @@
     }
     to {
         top: 180px; /* Original top position */
-        width: 245px; /* Original width */
-        height: 195px; /* Original height */
+        width: 225px; /* Original width */
+        height: 175px; /* Original height */
     }
 }
 

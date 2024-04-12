@@ -71,12 +71,15 @@ body {
 
 /* Navigation Bar Styles */
 .nav-bar {
+    position: sticky;
+    top: 0;
     background-color: black;
     padding: 10px 20px; 
     display: block; 
     transition: all 0.3s ease-in-out; 
     max-height: 100px; 
     overflow: hidden; 
+    z-index: 1000; /* Ensure the navigation bar stays above other content */
 }
 
 .nav-bar ul {
@@ -241,4 +244,81 @@ body {
     body.active-dropdown {
         padding-top: 50px;
     }
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 150px; /* Increased padding on left and right */
+    position: relative; /* Added position relative for positioning the name */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px; /* Adjusted logo size */
+    height: 50px;
+}
+
+.footer-navigation ul,
+.footer-products ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navigation ul li,
+.footer-products ul li {
+    margin-bottom: 10px;
+}
+
+.footer-navigation a,
+.footer-products a,
+.footer-contact p {
+    color: #fff; /* Set text color to white */
+    font-size: 14px; /* Decreased font size */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-navigation a:hover,
+.footer-products a:hover,
+.footer-contact p:hover {
+    color: #f61d15; /* Red color on hover */
+}
+
+.footer-social {
+    display: flex; /* Display social icons in a row */
+    justify-content: flex-start; /* Align social icons to the left */
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 24px; /* Decreased font size */
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #f61d15; /* Red color on hover */
+}
+
+.footer-legal {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }

@@ -60,7 +60,6 @@ body {
     width: 100%;
 }
 
-/* Change social icon color on hover */
 .header-desktop .contact-info .social-media .social-icon:hover {
     background-color: #ffffff;
 }
@@ -79,7 +78,7 @@ body {
     transition: all 0.3s ease-in-out; 
     max-height: 100px; 
     overflow: hidden; 
-    z-index: 1000; /* Ensure the navigation bar stays above other content */
+    z-index: 1000; 
 }
 
 .nav-bar ul {
@@ -129,6 +128,19 @@ body {
     background-color: #808080; 
     transform: scale(1.1); 
 }
+
+.header-desktop .logo img {
+    width: auto; 
+    max-width: 200px; 
+    height: auto; 
+    padding-top: 0; 
+    transition: all 0.3s ease;
+}
+
+.header-desktop .logo img:hover {
+    transform: scale(1.05);
+}
+
 
 /* Mobile View */
 @media (max-width: 900px) {
@@ -198,11 +210,11 @@ body {
     .dropdown-menu {
         display: none;
         position: absolute;
-        top: calc(100% + 10px); 
+        top: calc(100% + 0px); 
         left: 0;
         background-color: white;
-        padding: 10px;
-        border: 1px solid #ddd;
+        padding: 0px;
+        border: 0px solid #ddd;
         z-index: 999; 
         width: 100%;
         transition: top 0.3s ease, height 0.3s ease; 
@@ -212,7 +224,7 @@ body {
     
     .dropdown-menu.active {
         display: block;
-        top: calc(100% + 20px);
+        top: calc(100% + 1px);
         height: auto; 
     }
 
@@ -246,13 +258,12 @@ body {
     }
 }
 
-
 /* Footer Styles */
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 50px 150px; /* Increased padding on left and right */
-    position: relative; /* Added position relative for positioning the name */
+    padding: 50px 150px; 
+    position: relative; 
 }
 
 .footer-content {
@@ -267,7 +278,7 @@ body {
 }
 
 .footer-logo img {
-    width: 150px; /* Adjusted logo size */
+    width: 150px;
     height: 50px;
 }
 
@@ -285,32 +296,32 @@ body {
 .footer-navigation a,
 .footer-products a,
 .footer-contact p {
-    color: #fff; /* Set text color to white */
-    font-size: 14px; /* Decreased font size */
-    text-decoration: none; /* Remove underline */
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 .footer-navigation a:hover,
 .footer-products a:hover,
 .footer-contact p:hover {
-    color: #f61d15; /* Red color on hover */
+    color: #f61d15; 
 }
 
 .footer-social {
-    display: flex; /* Display social icons in a row */
-    justify-content: flex-start; /* Align social icons to the left */
+    display: flex; 
+    justify-content: flex-start;
 }
 
 .footer-social a {
     display: inline-block;
     margin-right: 10px;
     color: #fff;
-    font-size: 24px; /* Decreased font size */
+    font-size: 24px;
     text-decoration: none;
 }
 
 .footer-social a:hover {
-    color: #f61d15; /* Red color on hover */
+    color: #f61d15;
 }
 
 .footer-legal {

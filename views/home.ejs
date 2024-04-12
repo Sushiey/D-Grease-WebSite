@@ -19,6 +19,8 @@
         transform: rotate(45deg) translate(-6px, -6px);
     }
 
+
+    
     /* Dropdown Menu Styles */
     .dropdown-menu {
         display: none; 
@@ -60,10 +62,14 @@
     }
   </style>
 
-  <!-- Header Start -->
-  <!-- Desktop View -->
   <div class="header-desktop">
-    <div class="logo"><img src="img/D-grease_logo.png" alt="D-GREASE LOGO"></div> 
+
+    <div class="logo">
+      <a href="#">
+        <img src="img/D-grease_logo.png" alt="D-GREASE LOGO">
+      </a>
+    </div>
+    
     <div class="contact-info">
       <div class="phone"><a href="tel:01226777527">Speak to an expert : 01226777527</a></div>
       <div class="social-media">
@@ -73,52 +79,119 @@
       <a href="#" class="message-button">Message Us</a> 
     </div>
 
-    <!-- Burger Menu -->
+    <!-- START Burger Menu -->
+
     <div class="burger-menu">
         <div class="line line-1"></div>
         <div class="line line-2"></div>
         <div class="line line-3"></div>
     </div>
 
-    <!-- Dropdown Menu -->
+    <!-- END Burger Menu -->
+
+    <!-- START Dropdown Menu -->
+
     <div class="dropdown-menu">
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Products</a>
+          <ul class="dropdown-menu">
+            <li><a href="products/parts-washers.ejs">Parts Washers</a></li>
+            <li><a href="products/spray-gun-cleaners.ejs">Spray Gun Cleaners</a></li>
+            <li><a href="products/other-products.ejs">Other Products</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services/environment-waste-collections.ejs">Environment Waste Collections</a></li>
+            <li><a href="services/recyclable-industrial-wipes.ejs">Recyclable Industrial Wipes</a></li>
+          </ul>
+        </li>
+        <li><a href="online-store.ejs">Online Store</a></li>
+        <li><a href="about.ejs">About Us</a></li>
+        <li><a href="contact.ejs">Contact Us</a></li>
+      </ul>
     </div>
   </div>
 
-    <!-- Navigation Bar -->
-    <div class="nav-bar">
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+  <!-- END Dropdown Menu -->
+
+  <!-- START Navigation Bar -->
+
+  <div class="nav-bar">
+    <ul>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Products</a>
+        <ul class="dropdown-menu">
+          <li><a href="products/parts-washers.ejs">Parts Washers</a></li>
+          <li><a href="products/spray-gun-cleaners.ejs">Spray Gun Cleaners</a></li>
+          <li><a href="products/other-products.ejs">Other Products</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="services/environment-waste-collections.ejs">Environment Waste Collections</a></li>
+          <li><a href="services/recyclable-industrial-wipes.ejs">Recyclable Industrial Wipes</a></li>
+        </ul>
+      </li>
+      <li><a href="online-store.ejs">Online Store</a></li>
+      <li><a href="about.ejs">About Us</a></li>
+      <li><a href="contact.ejs">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- END Navigation Bar -->
+
 
   <!-- Header End -->
 
 </head>
+
+
 <body>
-  <!-- Your body content goes here -->
+
+<!-- START section for msg -->
+
   <div class="new-content">
     <h2>Specialists in waste management and suppliers of <span class="bold-text">parts washers</span>, <span class="bold-text">spray gun cleaners</span>, and <span class="bold-text">brake cleaners</span>.</h2>
-    <!-- Buttons for parts washers and spray gun cleaners -->
     <div class="buttons">
         <a href="#" class="big-button parts-washers-button">Parts Washers</a>
         <a href="#" class="big-button spray-gun-cleaners-button">Spray Gun Cleaners</a>
     </div>
   </div>
 
-  <div class="badge"></div> <!-- Added badge -->
+<!-- END section for msg -->
 
+<!-- START section for Parts Washers -->
+
+<div class="new-section">
+  <div class="image">
+      <img src="img/parts-wash.png" alt="Image Description">
+  </div>
+  
+  <div class="text">
+      <h3>Manual/Auto & Water/Solvent</h3>
+      <h2>Parts Washers</h2>
+      <p>We provide a wide range of parts washers from solvent-based to aqueous hot wash washers.</p>
+      <p>You can rent, lease or buy any of our machines. We also offer maintenance contracts to keep them in the best working condition.</p>
+      <p>Only D-Grease offers a wide choice of parts washer options, helping you select the best one for your needs.</p>
+      <ul>
+          <li>Solvent Parts Washers</li>
+          <li>Aqua Parts Washer</li>
+          <li>Spiral Drum</li>
+          <li>Ultrasonic Cleaners</li>
+      </ul>
+  </div>
+</div>
+
+<!-- END section for Parts Washers -->
+
+  <div class="badge"></div> 
 
 </body>
+
 
 <!-- Footer -->
 <footer class="footer">
@@ -164,10 +237,9 @@
 </footer>
 
 
-
-
 <script>
-  // JavaScript to toggle the active class on click
+  
+  // JavaScript to toggle the active class on click for burger menu
   const burgerMenu = document.querySelector('.burger-menu');
   const dropdownMenu = document.querySelector('.dropdown-menu');
   burgerMenu.addEventListener('click', function() {
@@ -183,17 +255,21 @@
       }
   });
 
+  // JavaScript to prevent dropdown menu from showing when nav bar links are clicked
   document.addEventListener("DOMContentLoaded", function() {
-      const dropdownMenu = document.querySelector('.dropdown-menu');
-      const navLink = document.querySelector('.nav-bar ul li a');
-      const body = document.querySelector('body');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navLinks = document.querySelectorAll('.nav-bar ul li a');
 
-      navLink.addEventListener('click', function() {
-          dropdownMenu.classList.toggle('active');
-          body.classList.toggle('active-dropdown');
-      });
-  });
+    burgerMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener('click', function(event) {
+            burgerMenu.classList.remove('active');
+        });
+    });
+});
 
 </script>
-
 </html>

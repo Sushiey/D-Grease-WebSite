@@ -1,28 +1,27 @@
 /* Styles specific to the home page */
-
-/* Additional Styles for new content */
 .new-content {
     text-align: center;
-    margin-top: 50px; /* Adjust margin top as needed */
-    padding: 100px; /* Increased padding for desktop view */
-    position: relative; /* Added position relative */
+    margin-top: 0px;
+    padding: 100px;
+    position: relative;
+    background-image: url('../img/garage.png');
+    background-size: cover;
+    background-position: center;
+    
 }
 
 .new-content h2 {
     font-weight: bold;
-    color: #333;
-    line-height: 1.5; /* Added line height */
-    margin-bottom: 20px; /* Adjusted margin bottom */
-    /* Different font sizes based on viewport width */
-    font-size: 50px; /* Largest font size by default */
-    margin-top: 100px; /* Decreased margin top by 30 pixels */
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 135px 0 20px;
+    font-size: 80px;
 }
-
 
 .new-content p {
     color: #555;
-    font-size: 24px; /* Larger font size for desktop view */
-    margin-top: -20px; /* Adjusted margin top */
+    font-size: 24px;
+    margin-top: -20px;
 }
 
 .bold-text {
@@ -33,16 +32,17 @@
 /* Additional Styles for badge */
 .badge {
     position: absolute;
-    top: 170px; /* Adjust top position */
-    right: 5px; /* Adjust right position */
-    background-image: url('../img/rent_lease_buy.png'); /* Adjust image path */
+    top: 190px;
+    right: 5px;
+    background-image: url('../img/rent_lease_buy_shadow.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 220px; /* Adjusted width */
-    height: 170px; /* Adjusted height */
-    z-index: 1; /* Ensure badge is above the content */
-    animation: badgeBounce 1s infinite alternate; /* Added animation */
+    width: 220px;
+    height: 170px;
+    z-index: 1;
+    animation: badgeBounce 1s infinite alternate;
 }
+
 
 /* Bounce animation for badge */
 @keyframes badgeBounce {
@@ -50,100 +50,84 @@
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-20px);
+        transform: translateY(-9px);
     }
 }
 
-/* Media Query for Large Desktop View */
+/* Large Desktop View */
 @media (max-width: 1100px) {
     .new-content h2 {
-        font-size: 50px; /* Large font size for screens above 1100px */
+        font-size: 50px;
     }
 }
 
-/* Media Query for Medium Desktop View */
+/* Medium Desktop View */
 @media (max-width: 900px) {
     .new-content h2 {
-        font-size: 40px; /* Reduced font size for screens between 1100px and 1000px */
-        animation: shrinkFontMedium 0.5s forwards; /* Added animation */
+        font-size: 40px; 
+        animation: shrinkFontMedium 0.5s forwards;
     }
     .new-content p {
-        font-size: 18px; /* Smaller font size for screens below 900px */
-        margin-top: -30px; /* Adjusted margin top for small text mode */
+        font-size: 18px;
+        margin-top: -30px;
     }
     .badge {
-        top: 120px; /* Adjust top position */
-        animation: moveBadge 0.5s forwards, badgeBounce 1s infinite alternate; /* Added animation */
+        top: 120px;
+        animation: moveBadge 0.5s forwards, badgeBounce 1s infinite alternate;
     }
 }
 
-/* Media Query for Small Desktop View */
-@media (max-width: 600px) {
+/*Small Desktop View */
+@media (min-width: 900px) {
     .new-content h2 {
-        font-size: 30px; /* Reduced font size for screens below 600px */
-        animation: shrinkFontSmall 0.5s forwards; /* Added animation */
-    }
-}
-
-@media (min-width: 901px) {
-    .new-content h2 {
-        animation: enlargeFont 0.5s forwards; /* Added animation */
+        animation: enlargeFont 0.5s forwards; 
     }
     .badge {
-        animation: moveBadgeReverse 0.5s forwards, badgeBounce 1s infinite alternate; /* Added animation */
+        animation: moveBadgeReverse 0.5s forwards, badgeBounce 1s infinite alternate;
     }
 }
 
 @keyframes shrinkFontMedium {
     from {
-        font-size: 50px;
+        font-size: 60px;
     }
     to {
-        font-size: 30px; /* Reduced font size for medium desktop view */
-    }
-}
-
-@keyframes shrinkFontSmall {
-    from {
-        font-size: 40px; /* Reduced font size for medium desktop view */
-    }
-    to {
-        font-size: 30px; /* Reduced font size for small desktop view */
+        font-size: 35px; 
     }
 }
 
 @keyframes enlargeFont {
     from {
-        font-size: 30px; /* Reduced font size for medium desktop view */
+        font-size: 35px;
     }
     to {
-        font-size: 40px; /* Original font size for medium desktop view */
+        font-size: 50px;
     }
 }
 
 @keyframes moveBadge {
     from {
-        top: 180px; /* Original top position */
-        width: 225px; /* Original width */
-        height: 175px; /* Original height */
+        top: 180px;
+        width: 225px;
+        height: 175px; 
     }
     to {
-        top: 130px; /* Adjusted top position */
-        width: 225px; /* Adjusted width */
-        height: 175px; /* Adjusted height */
+        top: 115px; 
+        width: 185px; 
+        height: 140px;
     }
 }
 
 @keyframes moveBadgeReverse {
     from {
-        top: 130px; /* Adjusted top position */
-        width: 225px; /* Adjusted width */
-        height: 175px; /* Adjusted height */
+        top: 115px;
+        width: 185px;
+        height: 140px;
     }
     to {
-        top: 180px; /* Original top position */
-        width: 225px; /* Original width */
-        height: 175px; /* Original height */
+        top: 180px;
+        width: 210px;
+        height: 160px;
     }
 }
 
@@ -155,47 +139,180 @@
     padding: 10px 20px;
     color: #f61d15;
     background: none;
-    border: 2px solid #f61d15; /* Added border */
-    border-radius: 5px; /* Added border radius */
+    border: 2px solid #f61d15;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for background color and text color */
-    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
 }
 
 .parts-washers-button:hover,
 .spray-gun-cleaners-button:hover,
 .brake-cleaners-button:hover {
-    background-color: #f61d15; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
+    background-color: #f61d15;
+    color: #fff;
 }
 
 /* Big Button Styles */
 .big-button {
     display: inline-block;
-    margin-top: 60px; /* Adjusted margin to move buttons down more */
-    padding: 25px 50px; /* Increased padding to make buttons bigger */
-    font-size: 32px; /* Increased font size */
+    margin-top: 60px;
+    padding: 15px 30px; 
+    font-size: 24px;
     font-weight: bold;
-    color: #f61d15;
-    background-color: transparent;
-    border: 3px solid #f61d15; /* Added thicker border */
-    border-radius: 10px; /* Added border radius */
+    color: #fff;
+    background-color: rgba(246, 29, 21, 0.5);
+    border: 3px solid #f61d15;
+    border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added transition for background color, text color, and transform */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .big-button:hover {
-    background-color: #f61d15; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
-    transform: scale(1.05); /* Scale the button slightly on hover */
+    background-color: #f61d15;
+    color: #fff;
+    transform: scale(1.05); 
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3); 
 }
 
-/* Media Query for Mobile View */
-@media (max-width: 1000px) {
+.new-content p{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Small Desktop View */
+@media (max-width: 1800px) {
     .big-button {
-        padding: 15px 30px; /* Decreased padding for smaller size */
-        font-size: 24px; /* Decreased font size for smaller size */
-        margin-top: 30px; /* Adjusted margin for smaller size */
+        padding: 15px 30px; 
+        font-size: 24px;
+        margin-top: 30px;
+        display: inline-block;
+    }
+
+    .parts-washers-button {
+        margin-right: 20px;
+    }
+}
+
+
+
+.new-section {
+    background-color: #f00;
+    color: #fff; 
+    padding: 50px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    margin: 0 auto;
+    position: relative;
+    max-width: none;
+}
+
+.image,
+.text {
+    flex: 1;
+}
+
+.image {
+    margin-right: 20px;
+    animation: moveImageDesktop 1s forwards;
+    transition: margin-right 0.5s; 
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+.text {
+    text-align: left;
+    animation: moveTextDesktop 1s forwards;
+}
+
+.new-section h2 {
+    font-size: 50px; 
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.new-section h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+/* Keyframes for image movement on desktop view */
+@keyframes moveImageDesktop {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for text movement on desktop view */
+@keyframes moveTextDesktop {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Small Desktop View */
+@media (max-width: 1000px) {
+    .new-section {
+        padding: 50px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        animation: moveImageMobile 1s forwards;
+    }
+
+    /* Animation for text change on mobile view */
+    .text {
+        animation: moveTextMobile 1s forwards, fadeIn 1s forwards;
+    }
+}
+
+/* Keyframes for image movement on mobile view */
+@keyframes moveImageMobile {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for text movement on mobile view */
+@keyframes moveTextMobile {
+    from {
+        transform: translateY(-50px); 
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for fading in text */
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1;
     }
 }

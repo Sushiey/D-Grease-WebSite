@@ -1,23 +1,9 @@
-# Transportes Carvalho & Bélico
-A business website for Transportes Carvalho & Bélico a Figueira da Foz´s logistics services company. Goals are improve lead conversion rate, generate more sales and improve sales support.
-
-## Prerequisites
-Use a recent browser. For example: Google Chrome, Mozilla Firefox, Opera, Microsoft Edge or Vivaldi.
+# TD-Grease Website
+A business website for D-Grease
 
 ## About
 
-Business Website - Transportes Carvalho e Bélico company.
-
-Site structured by six pages (Full Screen Photo layout, Headline and Thumbnails Gallery layout, Featured Image layout, Zig-Zag layout and Form layouts): 
-- Início;   
-- Sobre Nós; 
-- Serviços;  
-- Informações:
-  - Clientes. 
-  - Notícias.  
-- Contactos.
-
-site is published at https://julionuneslucas.github.io/Transportes-Carvalho-Belico/
+site is published at ....
 
 ## Built With
 
@@ -30,20 +16,9 @@ site is published at https://julionuneslucas.github.io/Transportes-Carvalho-Beli
 
 ## Author
 
-- **Júlio Lucas** - code and design.
+- **Luke Harriosn** - code and design.
  
 ## Copyright and License
-
-The MIT License (MIT)
-
-Copyright (c) 2013-2019 Blackrock Digital LLC
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 
 Bootstrap v4.0.0 (https://getbootstrap.com)
   * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)

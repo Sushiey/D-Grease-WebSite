@@ -3,7 +3,7 @@ A business website for D-Grease
 
 ## About
 
-site is published at ....
+site is published at [....](https://sushiey.github.io/D-Grease-WebSite/)
 
 ## Built With
 

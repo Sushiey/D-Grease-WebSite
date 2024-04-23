@@ -1,4 +1,4 @@
-# TD-Grease Website
+# D-Grease Website
 A business website for D-Grease
 
 ## About
